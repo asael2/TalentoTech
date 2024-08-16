@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ECOENERGY Admin</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.ethers.io/lib/ethers-5.2.umd.min.js"
+        type="application/javascript"></script>
+	<link rel="stylesheet" href="../styles.css">
+</head>
+<body class="bg-gray-900 text-white font-inter min-h-screen flex flex-col items-center justify-center px-4">
+
+
+    <div class="container mx-auto max-w-3xl rounded-lg shadow-md p-8">
+        <h1 class="text-3xl font-bold mb-4 text-center">ECOENERGY Admin</h1>
+
+        <div id="wallet-section" class="mb-4">
+            <button id="connect-wallet" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Connect Wallet</button>
+            <p id="wallet-address" class="mt-2 text-gray-400">Wallet Address: Not Connected</p>
+        </div>
+
+        <div id="admin-actions" class="flex flex-col space-y-4 hidden">
+            <div id="set-price-section">
+                <h2 class="text-xl font-bold mb-2">Set Token Price</h2>
+                <input type="number" id="new-price" placeholder="Enter New Price (ETH)" class="w-full px-3 py-2 border rounded-md focus:outline-none focus:shadow-outline">
+                <button id="set-price-button" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Set Price</button>
+            </div>
+
+            <div id="withdraw-section">
+                <h2 class="text-xl font-bold mb-2">Withdraw Funds</h2>
+                <input type="number" id="withdraw-amount" placeholder="Enter Amount (ETH)" class="w-full px-3 py-2 border rounded-md focus:outline-none focus:shadow-outline">
+                <button id="withdraw-button" class="bg-yellow-500 hover:bg-yellow-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Withdraw</button>
+            </div>
+        </div>
+
+        <div id="token-info-section" class="mb-4">
+            <h2 class="text-xl font-bold mb-2">Token Information</h2>
+            <p class="mb-1">Total Supply: <span id="total-supply">0</span> ECOENERGY</p>
+            <p>Current Price: <span id="token-price">0</span> ETH</p>
+        </div>
+
+    </div>
+
+	<script src="../scripts.js"></script>
+</body>
+</html>
